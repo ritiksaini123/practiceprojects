@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+           body{
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+        height: 100vh;
+        background-color: #e3e7f3;
+    overflow: hidden;}
+
+         #container{
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+
+        } 
+        table{
+            display: flex;
+            flex-direction: column;
+            column-gap: 40px;
+            border: 2px dashed rgb(53, 106, 126);
+            border-radius: 20px solid #e3e7f3;
+            border-spacing:0 ;
+            width: 70%;
+        }
+        tr{
+            width: 100%;
+        }
+        th,tr,td{
+            border: none;
+            outline: none;
+            margin: 0;
+        }
+        tbody  td{
+            /* padding: 30px; */
+            /* border: 1px solid red; */
+            width: 100px;
+            text-align: center;
+        }
+        th{
+            padding: 15px;
+            background-color: #2c344f;
+            color:white;
+            border: none;
+            outline: none;
+            width: 100px;
+        }
+        td{
+            padding: 15px;
+            background-color: #f2f8ff;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+
+    </div>
+
+    <script>
+        let container = document.getElementById('container');
+        const data = JSON.parse(localStorage.getItem('data'));
+        console.log(data)
+        let tableContent= `<table>
+        <tr>
+        <th>full name</th>
+        <th>email</th>
+        <th>mobilenumber</th>
+        <th>gender</th>
+        <th>qualification</th>
+        <th>hobbies</th>
+        <th>password</th>
+    </tr>
+        
+        <tbody id="allinfo">
+            <tr>
+        <td>${data['fullname']}</td>
+        <td>${data['email']}</td>
+        <td>${data['mobilenumber']}</td>
+        <td>${data['gender']}</td>
+        <td>${data['qualification']}</td>
+        <td>${data['hobbies']}</td>
+        <td>${data['password']}</td>
+        </tr></tbody>
+    </table>`
+container.innerHTML=tableContent;
+    </script>
+</body>
+
+</html>

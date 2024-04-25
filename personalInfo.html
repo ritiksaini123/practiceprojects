@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <div class="progress-bar">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <h2>Personal Details</h2>
+            <form action="" name="contact-form">
+                <label for="fullname">
+                    Full Name
+                </label>
+                <input type="text" name="fullname" id="fullName" placeholder="enter fullname">
+                <p id="nameError" class="error"></p>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="name@gmail.com">
+                <p id="emailError" class="error"></p>
+                <label for="moblienumber">Mobile Number</label>
+                <input type="tel" name="moblienumber" id="mobileNumber" placeholder="enter number">
+                <p id="phoneError" class="error"></p>
+                <div class="gender">
+                    <p>choose gender</p>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">female</label>
+                    <input type="radio" id="other" name="gender" value="other">
+                    <label for="other">other</label>
+                    <p id="genderError" class="error">this field is required to choose gender</p>
+                </div>
+                <div class="submit-section">
+                    <input type="button" value="Next" class="submit" id="next-btn">
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+
+</html>
